@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="IconText">
+        <attr name="typefaceAsset" format="string" />
+    </declare-styleable>
+    <declare-styleable name="NonSwipeableViewPager">
+        <attr name="swipeable" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="ExpandableTextView">
+        <attr name="maxCollapsedLines" format="integer" />
+        <attr name="animDuration" format="integer" />
+        <attr name="animAlphaStart" format="float" />
+        <attr name="expandIndicator" format="reference" />
+        <attr name="collapseIndicator" format="reference" />
+        <attr name="expandToggleType" format="enum">
+            <enum name="ImageButton" value="0" />
+            <enum name="TextView" value="1" />
+        </attr>
+        <attr name="expandableTextId" format="reference" />
+        <attr name="expandCollapseToggleId" format="reference" />
+        <attr name="expandToggleOnTextClick" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="AvatarImageBehavior">
+        <attr name="finalXPosition" format="dimension" />
+        <attr name="finalYPosition" format="dimension" />
+        <attr name="finalHeight" format="dimension" />
+        <attr name="finalToolbarHeight" format="dimension" />
+        <attr name="startXPosition" format="dimension" />
+        <attr name="startToolbarPosition" format="dimension" />
+        <attr name="startHeight" format="dimension" />/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomCheckBox">
+        <attr name="duration" format="integer" />
+        <attr name="checked" format="boolean" />
+        <attr name="stroke_width" format="dimension" />
+        <attr name="color_tick" format="color" />
+        <attr name="color_checked" format="color" />
+        <attr name="color_unchecked" format="color" />
+        <attr name="color_unchecked_stroke" format="color" />
+    </declare-styleable>
+    <declare-styleable name="OtpViewTheme">
+        <attr name="otpViewStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="OtpView">
+        <attr name="OtpItemCount" format="integer" />
+        <attr name="OtpItemWidth" format="dimension" />
+        <attr name="OtpItemHeight" format="dimension" />
+        <attr name="OtpItemRadius" format="dimension" />
+        <attr name="OtpItemSpacing" format="dimension" />
+        <attr name="OtpLineWidth" format="dimension" />
+        <attr name="OtpLineColor" format="reference|color" />
+        <attr name="OtpViewType" format="enum">
+            <enum name="rectangle" value="0" />
+            <enum name="line" value="1" />
+            <enum name="none" value="2" />
+        </attr>
+        <attr name="android:cursorVisible" />
+        <attr name="android:textAllCaps" />
+        <attr name="OtpCursorWidth" format="dimension" />
+        <attr name="OtpCursorColor" format="reference|color" />
+        <attr name="android:itemBackground" />
+        <attr name="OtpHideLineWhenFilled" format="boolean" />
+        <attr name="OtpState_filled" format="boolean" />
+        <attr name="OtpRtlTextDirection" format="boolean" />
+        <attr name="OtpMaskingChar" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="ShapeOfView">
+        <attr name="shape_clip_drawable" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ArcView">
+        <attr name="shape_arc_height" format="dimension" />
+        <attr name="shape_arc_position" format="enum">
+            <enum name="bottom" value="1" />
+            <enum name="top" value="2" />
+            <enum name="left" value="3" />
+            <enum name="right" value="4" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="CircleView">
+        <attr name="shape_circle_borderWidth" format="dimension" />
+        <attr name="shape_circle_borderColor" format="color" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ExpandableLayout">
+        <attr name="el_duration" format="integer" />
+        <attr name="el_expanded" format="boolean" />
+        <attr name="el_parallax" format="float" />
+        <attr name="android:orientation" />
+    </declare-styleable>
+    <declare-styleable name="SwipeLayout">
+        <attr name="swipeDirection" format="integer">
+            <flag name="left" value="1" />
+            <flag name="right" value="2" />
+        </attr>
+        <attr name="isEnabledSwipe" format="boolean" />
+        <attr name="isFreeDragAfterOpen" format="boolean" />
+        <attr name="isFreeHorizontalDrag" format="boolean" />
+        <attr name="isContinuousSwipe" format="boolean" />
+        <attr name="isTogether" format="boolean" />
+        <attr name="rightItem" format="reference" />
+        <attr name="leftItem" format="reference" />
+        <attr name="draggedItem" format="reference" />
+        <attr name="autoMovingSensitivity" format="integer" />
+        <attr name="rightDragViewPadding" format="dimension" />
+        <attr name="leftDragViewPadding" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="TagLabelText">
+        <attr name="tagFirst" format="boolean" /><!--   text đầu tiên có phải là đặc biệt ko     -->
+        <attr name="tagBold" format="boolean" /><!--   Tag có in đậm chữ ko     -->
+
+        <attr name="tagText" format="string" />
+
+        <attr name="tagRadius" format="dimension" />
+
+        <attr name="tagSize" format="dimension" />
+
+        <attr name="tagPaddingStart" format="dimension" />
+        <attr name="tagPaddingEnd" format="dimension" />
+
+        <attr name="tagMarginStart" format="dimension" />
+        <attr name="tagMarginEnd" format="dimension" />
+
+        <attr name="tagTextColor" format="color" />
+        <attr name="tagTextBackgroundColor" format="color" />
+    </declare-styleable>
+</resources>

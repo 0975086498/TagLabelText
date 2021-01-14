@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.nextsolutions.taglabeltext.MainActivity">
+
+    <com.nextsolutions.taglabeltext.TagLabelText
+        android:id="@+id/tagLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="center_vertical"
+        android:text="Combo 2 Túi Nước Giặt Ariel Matic Đậm Đặc (2.4Kg/ Túi)"
+        android:textColor="#24282C"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:tagBold="true"
+        app:tagFirst="true"
+        app:tagMarginEnd="8dp"
+        app:tagPaddingEnd="8dp"
+        app:tagPaddingStart="8dp"
+        app:tagRadius="8dp"
+        app:tagSize="10sp"
+        app:tagText="mStore mall"
+        app:tagTextBackgroundColor="#289767"
+        app:tagTextColor="#fff" />
+
+    <com.nextsolutions.taglabeltext.TagLabelText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layerType="hardware"
+        android:text="@{viewModel.productDetail.productName}"
+        android:textColor="#24242C"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:tagBackgroundColor="@color/primaryColor"
+        app:tagBold="true"
+        app:tagFirst="true"
+        app:tagMarginEnd="4dp"
+        app:tagPaddingEnd="6dp"
+        app:tagPaddingStart="6dp"
+        app:tagRadius="4dp"
+        app:tagSize="10sp"
+        app:tagText="@{viewModel.productDetail.getDistributorMall ? @string/mstrore_mall : ``}"
+        app:tagTextColor="@color/white" />
+
+</LinearLayout>
