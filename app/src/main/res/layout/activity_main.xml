@@ -35,25 +35,25 @@
             app:tagTextBackgroundColor="#289767"
             app:tagTextColor="#fff" />
 
-                <com.nextsolutions.taglabeltext.TagLabelText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:gravity="center_vertical"
-                    android:text="Combo 2 Túi Nước Giặt Arie Matic  Matic Đậm Đặc (2.4Kg/ Túi)"
-                    android:textColor="#24282C"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    app:tagBold="true"
-                    app:tagFirst="false"
-                    app:tagMarginStart="8dp"
-                    app:tagPaddingEnd="8dp"
-                    app:tagPaddingStart="8dp"
-                    app:tagRadius="6dp"
-                    app:tagSize="12sp"
-                    app:tagText="mStore mall"
-                    app:tagTextBackgroundColor="#E40C0C"
-                    app:tagTextColor="#000" />
+        <com.nextsolutions.taglabeltext.TagLabelText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="center_vertical"
+            android:text="Combo 2 Túi Nước Giặt Arie Matic  Matic Đậm Đặc (2.4Kg/ Túi)"
+            android:textColor="#24282C"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:tagBold="true"
+            app:tagFirst="false"
+            app:tagMarginStart="8dp"
+            app:tagPaddingEnd="8dp"
+            app:tagPaddingStart="8dp"
+            app:tagRadius="6dp"
+            app:tagSize="12sp"
+            app:tagText="mStore mall"
+            app:tagTextBackgroundColor="#E40C0C"
+            app:tagTextColor="#FFF" />
 
 
         <!--    <com.nextsolutions.taglabeltext.TagLabelText-->
