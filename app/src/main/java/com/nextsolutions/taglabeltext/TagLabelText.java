@@ -8,17 +8,21 @@ import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.style.AbsoluteSizeSpan;
+import android.text.style.BackgroundColorSpan;
 import android.text.style.StyleSpan;
 import android.util.AttributeSet;
 
 import com.nextsolutions.myapplication.R;
 
+import androidx.databinding.BindingAdapter;
+
 /**
  * @author Good_Boy
+ * @apiNote Tag text's size should be lower than origin text.
  */
 
 public class TagLabelText extends androidx.appcompat.widget.AppCompatTextView {
-    public static String tagText;
+    public String tagText;
     private String text;//text gốc trước khi thêm tag
     boolean isTagFirst;
     boolean isTagBold;
@@ -32,8 +36,8 @@ public class TagLabelText extends androidx.appcompat.widget.AppCompatTextView {
     float tagMarginStart;
     float tagMarginEnd;
 
-    public static int tagTextColor;
-    public static int tagBackgroundColor;
+    public int tagTextColor;
+    public int tagBackgroundColor;
 
     public TagLabelText(Context context) {
         super(context);
@@ -41,13 +45,13 @@ public class TagLabelText extends androidx.appcompat.widget.AppCompatTextView {
 
     public TagLabelText(Context context, AttributeSet attrs) {
         super(context, attrs);
-        this.text = getText().toString();
+        this.text = super.getText().toString();
         setSpanText(context, attrs);
     }
 
     public TagLabelText(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        this.text = getText().toString();
+        this.text = super.getText().toString();
         setSpanText(context, attrs);
     }
 
@@ -83,12 +87,13 @@ public class TagLabelText extends androidx.appcompat.widget.AppCompatTextView {
         tagBackgroundColor = a.getColor(R.styleable.TagLabelText_tagTextBackgroundColor, Color.parseColor("#289767"));
     }
 
-    private void setSpan() {
+    public void setSpan() {
         SpannableString tag = new SpannableString(tagText);
-        tag.setSpan(new RoundBackgroundColorSpan(tagBackgroundColor, tagTextColor, tagRadius, tagPaddingStart, tagPaddingEnd, tagMarginStart, tagMarginEnd)
-                , 0, tag.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 
-        tag.setSpan(new AbsoluteSizeSpan(tagSize, false), 0, tag.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        tag.setSpan(new AbsoluteSizeSpan(tagSize, false), 0, tag.length(), Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
+
+        tag.setSpan(new RoundBackgroundColorSpan(tagBackgroundColor, tagTextColor, tagRadius, tagPaddingStart, tagPaddingEnd, tagMarginStart, tagMarginEnd)
+                , 0, tag.length(), Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
 
         if (isTagBold) {
             tag.setSpan(new StyleSpan(Typeface.BOLD), 0, tag.length(), Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
@@ -106,34 +111,45 @@ public class TagLabelText extends androidx.appcompat.widget.AppCompatTextView {
         setText(stringBuilder);
     }
 
-    public void setTagText(String text) {
-        tagText = text;
-        setSpan();
-    }
-
 
     public void mSetText(String text) {
         this.text = text;
-        setText(this.text);
-        setSpan();
+        super.setText(this.text);
+    }
+
+    public String mGetText() {
+        return text;
     }
 
 
-//    @BindingAdapter({"android:text", "app:tagText", "app:tagBackgroundColor", "app:tagTextColor"})
-//    public static void setText(TagLabelText view, CharSequence text, CharSequence tagText, int tagBackgroundColor, int tagTextColor) {
-//        view.setText(text);
-//        TagLabelText.tagText = tagText.toString();
-//        TagLabelText.tagBackgroundColor = tagBackgroundColor;
-//        TagLabelText.tagTextColor = tagTextColor;
-//        view.setSpan();
-//    }
-//
-//    @BindingAdapter({"android:text", "app:tagText"})
-//    public static void setText(TagLabelText view, CharSequence text, CharSequence tagText) {
-//        view.setText(text);
-//        TagLabelText.tagText = tagText.toString();
-//        view.setSpan();
-//    }
+    @BindingAdapter({"text", "tagText", "tagBackgroundColor", "tagTextColor"})
+    public static void setTagText(TagLabelText view, CharSequence text, CharSequence tagText, Integer tagBackgroundColor, Integer tagTextColor) {
+        if (text != null) {
+            view.mSetText(text.toString());
+        }
+        if (tagText != null) {
+            view.tagText = tagText.toString();
+        }
+        if (tagBackgroundColor != null) {
+            view.tagBackgroundColor = tagBackgroundColor;
+        }
+        if (tagTextColor != null) {
+            view.tagTextColor = tagTextColor;
+        }
+        view.setSpan();
+    }
+
+    @BindingAdapter({"text", "tagText"})
+    public static void setTagText(TagLabelText view, CharSequence text, CharSequence tagText) {
+        if (text != null) {
+            view.mSetText(text.toString());
+        }
+        if (tagText != null) {
+            view.tagText = tagText.toString();
+        }
+
+        view.setSpan();
+    }
 
 }
 

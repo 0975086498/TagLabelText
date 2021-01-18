@@ -38,6 +38,7 @@ public class RoundBackgroundColorSpan extends ReplacementSpan {
 
     @Override
     public int getSize(@NonNull Paint paint, CharSequence text, int start, int end, Paint.FontMetricsInt fm) {
+        //width of tag : padding + margin + content
         return (int) (mPaddingStart + mMarginStart + paint.measureText(text.subSequence(start, end).toString()) + mPaddingEnd + mMarginEnd);
     }
 

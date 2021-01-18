@@ -15,7 +15,8 @@ public class MainActivity extends AppCompatActivity {
 
         TagLabelText tagLabelText = findViewById(R.id.tagLabel);
 
-        tagLabelText.mSetText("SỢ RẰNG EM BIẾT ANH CÒN YÊU EM (Afraid You Know I’m Still In Love) (OFFICIAL MV)");
-        tagLabelText.setTagText("JUUN D");
+        tagLabelText.mSetText("LẠC TRÔI | OFFICIAL MUSIC VIDEO | SƠN TÙNG M-TP");
+        tagLabelText.tagText = "Sơn Tùng M-TP";
+        tagLabelText.setSpan();//apply properties of tagLabelText
     }
 }
