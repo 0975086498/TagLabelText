@@ -31,7 +31,7 @@ Use as normal TextView in android <br/>
             app:tagTextColor="#FFF" />
 ```
 
-With binding. You can make some method biding in class TagLabelText like exammple. Remember remove tag **android** or **app** before attr binding to use binding. I don't know how that work :))
+With binding. You can make some method binding in class TagLabelText like exammple. Remember remove tag **android** or **app** before attr binding to use binding. I don't know how that work :))
 
 ```
 <com.nextsolutions.taglabeltext.TagLabelText
