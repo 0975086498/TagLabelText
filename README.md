@@ -5,7 +5,7 @@
 
 ## Setup
 
-Coppy 2 class **RoundBackgroundColorSpan.java** and **TagLabelText.java** into your widget 
+Coppy 2 class **RoundBackgroundColorSpan.java** and **TagLabelText.java** into your widget . Don't forget add attr off **TagLabelText.java** in your attr file
 
 ## Usage
 Use as normal TextView in android <br/>
