@@ -57,7 +57,7 @@ In programmatically
 * `dimension: tagPaddingStart` - Padding Start of tag
 * `dimension: tagPaddingEnd` - Padding End of tag
 * `dimension: tagMarginStart` - MarginStart of tag
-* `dimension: tagMarginEnd` - MarginStart of tag
+* `dimension: tagMarginEnd` - MarginEnd of tag
 * `color: tagTextColor` - Color of tag text
 * `color: tagTextBackgroundColor` - Color backgroud of tag text
 
